@@ -1,2 +1,2 @@
 # MVVM-PatternSample
-viewModelFactory
+Best Practices
