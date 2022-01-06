@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/addNewNotesFragment"
-        android:name="com.scottgames.mvvm_patternsample.AddNewNotesFragment"
+        android:name="com.scottgames.mvvm_patternsample.screens.AddNewNotesFragment"
         android:label="fragment_add_new_notes"
         tools:layout="@layout/fragment_add_new_notes" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.scottgames.mvvm_patternsample.MainFragment"
+        android:name="com.scottgames.mvvm_patternsample.screens.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/noteFragment"
-        android:name="com.scottgames.mvvm_patternsample.NoteFragment"
+        android:name="com.scottgames.mvvm_patternsample.screens.NoteFragment"
         android:label="fragment_note"
         tools:layout="@layout/fragment_note" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.scottgames.mvvm_patternsample.StartFragment"
+        android:name="com.scottgames.mvvm_patternsample.screens.start.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
