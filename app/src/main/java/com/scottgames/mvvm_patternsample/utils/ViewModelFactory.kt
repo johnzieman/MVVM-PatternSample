@@ -1,8 +1,10 @@
-package com.scottgames.mvvm_patternsample
+package com.scottgames.mvvm_patternsample.utils
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.scottgames.mvvm_patternsample.MainViewModel
+import com.scottgames.mvvm_patternsample.screens.main.MainFragmentViewModel
 import com.scottgames.mvvm_patternsample.screens.start.StartFragmentViewModel
 
 class ViewModelFactory(val application: Application, val text: String) : ViewModelProvider.Factory {
@@ -13,6 +15,9 @@ class ViewModelFactory(val application: Application, val text: String) : ViewMod
             }
             StartFragmentViewModel::class.java -> {
                 StartFragmentViewModel(application) as T
+            }
+            MainFragmentViewModel::class.java -> {
+                MainFragmentViewModel(application) as T
             }
             else -> throw ClassNotFoundException()
         }
