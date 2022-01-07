@@ -7,15 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.scottgames.mvvm_patternsample.R
+import androidx.lifecycle.Observer
 import com.scottgames.mvvm_patternsample.databinding.FragmentMainBinding
+import com.scottgames.mvvm_patternsample.models.AppNote
 import com.scottgames.mvvm_patternsample.utils.FragmentNavigator
 import com.scottgames.mvvm_patternsample.utils.ViewModelFactory
 
 
 class MainFragment : Fragment() {
-
-
+    private lateinit var mainAdapter: MainAdapter
+    private lateinit var mObserever: androidx.lifecycle.Observer<List<AppNote>>
     private var fragmentNavigator: FragmentNavigator? = null
     private val mainFragmentViewModel: MainFragmentViewModel by viewModels {
         ViewModelFactory(
@@ -35,6 +36,13 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMainBinding.inflate(layoutInflater, container, false)
+        mainAdapter = MainAdapter()
+        binding.recyclerView.adapter = mainAdapter
+        mObserever = Observer {
+            mainAdapter.setList(it.reversed())
+        }
+
+        mainFragmentViewModel.allNotes.observe(viewLifecycleOwner, mObserever)
 
         binding.btnAddNote.setOnClickListener {
             fragmentNavigator?.onOpenMainToAddNoteFragment()
