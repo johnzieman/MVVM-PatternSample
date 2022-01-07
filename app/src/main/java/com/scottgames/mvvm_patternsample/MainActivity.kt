@@ -29,4 +29,8 @@ class MainActivity : AppCompatActivity(), FragmentNavigator {
     override fun onOpenMainToAddNoteFragment() {
         navController.navigate(R.id.action_mainFragment_to_addNewNotesFragment)
     }
+
+    override fun onOpenAddNotetoMainFragment() {
+        navController.navigate(R.id.action_addNewNotesFragment_to_mainFragment)
+    }
 }
