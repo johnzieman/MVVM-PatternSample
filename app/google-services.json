@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "830983972193",
+    "project_id": "temp-notes-43d83",
+    "storage_bucket": "temp-notes-43d83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830983972193:android:2ff76e4beec287e0009120",
+        "android_client_info": {
+          "package_name": "com.scottgames.mvvm_patternsample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "830983972193-9ukkmujj42ibm9po829fdkegkk57v5v3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeMruobgQMrJ5tU6jvL5o_V9OadeYaXGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "830983972193-9ukkmujj42ibm9po829fdkegkk57v5v3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
