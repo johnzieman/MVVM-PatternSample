@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.scottgames.mvvm_patternsample.MainViewModel
 import com.scottgames.mvvm_patternsample.screens.addNotes.AddNewNotesViewModel
 import com.scottgames.mvvm_patternsample.screens.main.MainFragmentViewModel
+import com.scottgames.mvvm_patternsample.screens.note.NoteViewModel
 import com.scottgames.mvvm_patternsample.screens.start.StartFragmentViewModel
 
 class ViewModelFactory(val application: Application, val text: String) : ViewModelProvider.Factory {
@@ -22,6 +23,9 @@ class ViewModelFactory(val application: Application, val text: String) : ViewMod
             }
             AddNewNotesViewModel::class.java -> {
                 AddNewNotesViewModel(application) as T
+            }
+            NoteViewModel::class.java -> {
+                NoteViewModel(application) as T
             }
             else -> throw ClassNotFoundException()
         }

@@ -36,7 +36,7 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMainBinding.inflate(layoutInflater, container, false)
-        mainAdapter = MainAdapter()
+        mainAdapter = MainAdapter(fragmentNavigator!!)
         binding.recyclerView.adapter = mainAdapter
         mObserever = Observer {
             mainAdapter.setList(it.reversed())
