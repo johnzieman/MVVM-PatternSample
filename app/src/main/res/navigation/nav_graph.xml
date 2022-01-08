@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_add_new_notes" >
         <action
             android:id="@+id/action_addNewNotesFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/naav_graph" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
@@ -35,7 +37,9 @@
         android:label="fragment_note">
         <action
             android:id="@+id/action_noteFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/naav_graph" />
         <argument
             android:name="note"
             app:argType="com.scottgames.mvvm_patternsample.models.AppNote" />
@@ -47,6 +51,8 @@
         tools:layout="@layout/fragment_start" >
         <action
             android:id="@+id/action_startFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/naav_graph" />
     </fragment>
 </navigation>
