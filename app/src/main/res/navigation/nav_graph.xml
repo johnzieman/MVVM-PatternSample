@@ -31,12 +31,14 @@
     </fragment>
     <fragment
         android:id="@+id/noteFragment"
-        android:name="com.scottgames.mvvm_patternsample.screens.NoteFragment"
-        android:label="fragment_note"
-        tools:layout="@layout/fragment_note" >
+        android:name="com.scottgames.mvvm_patternsample.screens.note.NoteFragment"
+        android:label="fragment_note">
         <action
             android:id="@+id/action_noteFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <argument
+            android:name="note"
+            app:argType="com.scottgames.mvvm_patternsample.models.AppNote" />
     </fragment>
     <fragment
         android:id="@+id/startFragment"
