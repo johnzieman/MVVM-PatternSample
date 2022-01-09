@@ -7,4 +7,12 @@ interface DataBaseRepository {
     val allNotes: LiveData<List<AppNote>>
     suspend fun insert(note: AppNote, onSuccess: () -> Unit)
     suspend fun delete(note: AppNote, onSuccess: () -> Unit)
+    fun connectToFirebase(
+        onSuccess: () -> Unit,
+        onFailure: (text: String) -> Unit,
+        email: String,
+        password: String
+    ){}
+    fun signOut(){}
+
 }

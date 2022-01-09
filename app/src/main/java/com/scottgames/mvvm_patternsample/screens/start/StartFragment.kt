@@ -66,7 +66,7 @@ class StartFragment : Fragment() {
 
     private fun initFirebase(type: String, email: String, password: String){
         startFragmentViewModel.inits(type, email = email, password = password){
-
+            fragmentNavigator?.onOpenStartToMainFragment()
         }
     }
 

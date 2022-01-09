@@ -7,7 +7,6 @@ import com.scottgames.mvvm_patternsample.database.DataBaseRepository
 import com.scottgames.mvvm_patternsample.database.firebase.AppFireBaseRepository
 import com.scottgames.mvvm_patternsample.database.room.AppRoomDataBase
 import com.scottgames.mvvm_patternsample.database.room.AppRoomRepository
-import com.scottgames.mvvm_patternsample.utils.Constants.FIREBASEREPOSITORY
 import com.scottgames.mvvm_patternsample.utils.Constants.REPOSITORY
 
 class StartFragmentViewModel(application: Application) : AndroidViewModel(application) {
@@ -20,8 +19,8 @@ class StartFragmentViewModel(application: Application) : AndroidViewModel(applic
                 onSuccess()
             }
             "type_firebase" -> {
-                FIREBASEREPOSITORY = AppFireBaseRepository()
-                FIREBASEREPOSITORY.connectToFirebase(
+                REPOSITORY = AppFireBaseRepository()
+                REPOSITORY.connectToFirebase(
                     { onSuccess() },
                     { Toast.makeText(context, it, Toast.LENGTH_SHORT).show() },
                     email,
